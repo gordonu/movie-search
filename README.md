@@ -1,13 +1,8 @@
 # Getting Started
-
-# Run Test
-npm run test
-
-# Install Dependencies
-npm install
-
-# Start Application
-npm start
+Instructions to download and run application:
+- Clone respository with 'git clone' command
+- Install dependencies with 'npm install'
+- Start application with 'npm start'
 
 # Challenges
 + API was a challenge to get working since I didn't understand their expected query parameters but I read the documentation and did a few example calls according to their instructions to figure it out.
@@ -32,3 +27,4 @@ npm start
 + Add loading spinners for when movie title, descriptions and posters are loading.
 + Abstract Load More Button into a separate component
 + Grey out Load More button when user has reached end of pagination.
++ Improve unit test coverage to cover event handlers in MainComponent.js

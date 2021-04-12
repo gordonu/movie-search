@@ -13,7 +13,7 @@ class Main extends Component {
         }
     }
 
-    fetchMovies = (value) => {
+    fetchMovies = value => {
         const BASE_URL = 'https://api.themoviedb.org/3/search/movie';
         const API_KEY = 'd7a3a18bf1f75a32e20a4c21012ba47b';
         const URI = `${BASE_URL}?api_key=${API_KEY}&language=en-US&query=${value}&page=${this.state.currentPage}&include_adult=false`;
@@ -44,7 +44,7 @@ class Main extends Component {
             .catch(error => console.log(error.message));
     }
 
-    handleInputChange = (event) => {
+    handleInputChange = event => {
         const target = event.target;
         const name = target.name;
         const value = target.value;
@@ -57,12 +57,12 @@ class Main extends Component {
         });
     }
 
-    handleLoadMore = (event) => {
+    handleLoadMore = () => {
         this.setState({ currentPage: this.state.currentPage + 1 }, 
             () => this.fetchMovies(this.state.movieTitle));
     }
 
-    handleSubmit = (event) => {
+    handleSubmit = event => {
         event.preventDefault();
     }
 
