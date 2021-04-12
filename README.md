@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Run Test
+npm run test
 
-## Available Scripts
+# Install Dependencies
+npm install
 
-In the project directory, you can run:
+# Start Application
+npm start
 
-### `yarn start`
+# Challenges
++ API was a challenge to get working since I didn't understand their expected query parameters but I read the documentation and did a few example calls according to their instructions to figure it out.
++ It has been a while since I have written Jest and Enzyme tests for React. I reviewed documentation on Jest and Enzyme and relearn how to write unit tests.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Design Decisions
++ Considered but did not use Redux since this is a simple application.
++ Used Reactstrap to make it easy to control stacking for screen sizes xs and m.
++ Abstracted Input and Card Components to avoid clutter in MainComponent.js.
++ Decided to use ReactStrap Cards instead of Media Objects since I generally like the look of Cards better but will consider using Media Objects as an improvement.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Planned Improvements
++ Truncate movie descriptions and replace extra text with a "see more" link.
++ Adjust sizing of movie poster images to be smaller so text can render above the fold in desktop and mobile views.
++ Clear movies when user removes query from input box.
++ Figure out scheme to remove data to free up memory as user loads too many pages of data.
++ Implement Infinite scroll.
++ Implement Input validation for Search Box.
++ Experiment with using ReactStrap Media Objects instead of Cards.
++ Create default blank image for images that do not exist or have broken links.
++ Implement PropTypes validation.
++ Add loading spinners for when movie title, descriptions and posters are loading.
++ Abstract Load More Button into a separate component
++ Grey out Load More button when user has reached end of pagination.
